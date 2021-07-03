@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube's video player page</title>
+  
+    <!-- CSS only -->
+    <script src="https://kit.fontawesome.com/e11ace4e23.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="topNav">
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <img src="./images/icon.png" alt="YouTube logo" id="icon">
+        <div class="searchBox">
+            <input id="searchInput" type="text" placeholder="Search">
+            <button class="searchBtn">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="mic"><img src="./images/mic.png" alt=""></button>
+            <div class="LastNav">
+                <img id="LastNavIcon" src="./images/video-add.png" alt="video add png">
+                <img id="LastNavIcon" src="./images/more.png" alt="more png">
+                <img src="./images/notification.png" alt="" id="LastNavIcon">
+                <img src="./images/latin_g.png" alt="" id="LastNavIcon" class="pfp">
+            </div>
+        </div>
+    </nav>
+    <div class="first">
+        <iframe id="player" width="950" height="534" src="https://www.youtube.com/embed/G0bBLvWXBvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        <p id="hashes"><a href="#">#angular </a><a href="#">#pwa </a><a href="#">#tutorial </a></p>
+        <p id="views">211,884 views • Sep 16, 2019</p>
+        <div class="likes">
+            <i id='likes'class="fas fa-thumbs-up fa-ig">5.9k</i>
+            <i id='likes' class="fas fa-thumbs-down fa-ig">166</i>
+            <img id="share" src="./images/share.png" alt="">
+            <img src="./images/save.png" alt="">
+            <img src="./images/more....png" alt="">
+        </div>
+        <hr id="seperator">
+        <div id="name">
+        <img id="fireShipPfp" src="https://yt3.ggpht.com/ytc/AKedOLTcIl6kKt3lEPJEySUf_hpHiKDKiFeo9eWPReLysQ=s48-c-k-c0x00ffffff-no-rj" alt="">
+        <div class="subAndName">
+            <h4 id="chName">FireShip</h4>
+        <p id="subs">719K subscribers</p>
+        </div>
+       
+    </div>
+        <p id="des">Learn the basics of Angular 8 🚀 by building a tic-tac-toe game 🕹️ from scratch...Then deploy it as an installable progressive web app (PWA). Go beyond the basics 👉https://fireship.io/courses/angular/</p>
+       
+   <script>
+
+       const likes = document.querySelectorAll('#likes')
+       const belowLikes = document.querySelector('#belowLikes')
+       likes.forEach(like => like.addEventListener('click', () => {
+           like.style.color = '#3EA6FF'
+           belowLikes.style.border = '1px solid #3EA6FF'
+       }))
+   </script>
+</body>
+</html>
